@@ -54,8 +54,8 @@ You can log in with these credentials to access the application features.
 ### 5. Application Features
 The application includes the following features:
 
-User Authentication: Secure login functionality for users.
-Invoice Management: View, download, and manage invoices in Excel format.
-Profile Management: Users can view and edit their personal information.
-Multi-language Support: Toggle between English and Spanish for the user interface.
-Data Export: Download invoices as Excel files for easy management.
+- **User Authentication**: Secure login functionality for users.
+- **Invoice Management**: View, download, and manage invoices in Excel format.
+- **Profile Management**: Users can view and edit their personal information.
+- **Multi-language Support**: Toggle between English and Spanish for the user interface.
+- **Data Export**: Download invoices as Excel files for easy management.
