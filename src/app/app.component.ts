@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'DobleElectricidadApp';
   constructor(private translate: TranslateService) {
     // Establece el idioma predeterminado al cargar la aplicación
-    this.translate.setDefaultLang('es');  // Cambia a tu idioma predeterminado si es diferente
+    this.translate.setDefaultLang('es');
   }
 
   switchLanguage(language: string) {

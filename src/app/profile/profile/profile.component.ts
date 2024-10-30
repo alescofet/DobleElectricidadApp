@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Comprobamos si hay datos en el sessionStorage y se aplican en caso de haberlos
     if(sessionStorage.getItem('name')){
       this.profileForm.get("name")?.setValue(sessionStorage.getItem("name"))
     }
@@ -35,6 +36,7 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmit(): void {
+    //En caso de que el formulario sea valido se guardan los nuevos datos en el sessionStorage
     if (this.profileForm.valid) {
       sessionStorage.setItem('name', this.profileForm.get('name')?.value)
       sessionStorage.setItem('email', this.profileForm.get('email')?.value)

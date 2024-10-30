@@ -17,6 +17,7 @@ export class AuthService {
   }
 
   logout(): void {
+    //Borra el "logueo" del sessionStorage y devuelve al usuario al login
     sessionStorage.removeItem('isAuthenticated');
     this.router.navigate([""])
   }

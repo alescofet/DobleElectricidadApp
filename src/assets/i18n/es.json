@@ -16,7 +16,7 @@
   },
   "PROFILE": {
     "TITLE":"Datos Personales",
-    "NAME": "Nombre",
+    "NAME": "Nombre del Titular",
     "EMAIL": "Correo Electrónico",
     "REGISTER_DATE": "Fecha de Alta",
     "ADDRESS":"Dirección de Envío",
@@ -24,10 +24,10 @@
   },
   "INVOICES": {
     "TITLE":"Lista de Facturas",
-    "NAME": "Nombre",
-    "DATE": "Fecha",
+    "NAME": "Nombre de la Factura",
+    "DATE": "Fecha de Emisión",
     "IMPORT": "Importe",
-    "ADDRESS":"Dirección",
+    "ADDRESS":"Dirección del Suministro",
     "ACTIONS":"Acciones",
     "DOWNLOAD":"Descargar"
   }

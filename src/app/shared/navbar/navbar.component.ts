@@ -11,6 +11,7 @@ export class NavbarComponent {
   constructor(private translate: TranslateService, private authService: AuthService) {}
 
   switchLanguage(language: string) {
+    //Cambia el lenguaje que se utiliza para el pipe translate
     this.translate.use(language);
   }
 

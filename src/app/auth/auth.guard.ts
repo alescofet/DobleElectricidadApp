@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
-  canActivate(): boolean {
+  canActivate(): boolean { //Comprueba si está logueado antes de acceder a las rutas protegidas, en caso de no estarlo devuelve al usuario al login
     if (this.authService.isLoggedIn()) {
       return true;
     } else {
