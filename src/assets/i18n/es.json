@@ -1,0 +1,35 @@
+{
+  "NAV": {
+    "PROFILE": "Perfil",
+    "INVOICES": "Facturas",
+    "LANGUAGE": "Idioma",
+    "LOGOUT": "Cerrar Sesión"
+  },
+  "LOGIN": {
+    "TITLE":"Iniciar Sesión",
+    "USER": "Usuario",
+    "USER_REQUIRED": "El usuario es obligatorio.",
+    "PASSWORD": "Contraseña",
+    "PASSWORD_REQUIRED": "La contraseña es obligatoria.",
+    "LOGIN": "Ingresar",
+    "ERROR":"Usuario o contraseña incorrectos"
+  },
+  "PROFILE": {
+    "TITLE":"Datos Personales",
+    "NAME": "Nombre",
+    "EMAIL": "Correo Electrónico",
+    "REGISTER_DATE": "Fecha de Alta",
+    "ADDRESS":"Dirección de Envío",
+    "SAVE":"Guardar Cambios"
+  },
+  "INVOICES": {
+    "TITLE":"Lista de Facturas",
+    "NAME": "Nombre",
+    "DATE": "Fecha",
+    "IMPORT": "Importe",
+    "ADDRESS":"Dirección",
+    "ACTIONS":"Acciones",
+    "DOWNLOAD":"Descargar"
+  }
+}
+

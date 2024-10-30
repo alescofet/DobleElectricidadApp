@@ -1,0 +1,36 @@
+<div class="container">
+<h2>{{'INVOICES.TITLE' | translate}}</h2>
+<table mat-table [dataSource]="invoices" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> {{'INVOICES.NAME' | translate}} </th>
+    <td mat-cell *matCellDef="let invoice"> {{ invoice.name }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> {{'INVOICES.DATE' | translate}} </th>
+    <td mat-cell *matCellDef="let invoice"> {{ invoice.date }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef> {{'INVOICES.IMPORT' | translate}} </th>
+    <td mat-cell *matCellDef="let invoice"> {{ invoice.amount | currency }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> {{'INVOICES.ADDRESS' | translate}} </th>
+    <td mat-cell *matCellDef="let invoice"> {{ invoice.address }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> {{'INVOICES.ACTIONS' | translate}} </th>
+    <td mat-cell *matCellDef="let invoice">
+      <button mat-raised-button color="primary" (click)="downloadInvoice(invoice)">
+        {{'INVOICES.DOWNLOAD' | translate}}
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="['name', 'date', 'amount', 'address', 'actions']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['name', 'date', 'amount', 'address', 'actions'];"></tr>
+</table>
+</div>

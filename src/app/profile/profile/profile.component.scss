@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+}
+
+button {
+  align-self: center;
+}
+
+.container{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+}

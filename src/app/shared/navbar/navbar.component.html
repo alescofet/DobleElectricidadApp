@@ -1,0 +1,13 @@
+<nav mat-toolbar>
+  <div>
+    <button mat-button (click)="switchLanguage('es')"><img src="../../../assets/icons/spain.png" alt="spanish-flag" class="flag"></button>
+    <button mat-button (click)="switchLanguage('en')"><img src="../../../assets/icons/uk.png" alt="british-flag" class="flag"></button>
+  </div>
+  <div>
+    <!-- Enseñar los botones solo en caso de que estes logueado -->
+    <button *ngIf="isLoggedIn()" mat-button routerLink="/profile">{{ 'NAV.PROFILE' | translate }}</button>
+    <button *ngIf="isLoggedIn()" mat-button routerLink="/invoices">{{ 'NAV.INVOICES' | translate }}</button>
+    <button *ngIf="isLoggedIn()" mat-button (click)="logout()">{{ 'NAV.LOGOUT' | translate }}</button>
+  </div>
+</nav>
+

@@ -1,0 +1,26 @@
+<div class="login-container">
+  <mat-card>
+    <h2>{{'LOGIN.TITLE' | translate}}</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>{{'LOGIN.USER' | translate}}</mat-label>
+        <input matInput formControlName="username" required>
+        <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
+          {{'LOGIN.USER_REQUIRED' | translate}}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{'LOGIN.PASSWORD' | translate}}</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+         {{'LOGIN.PASSWORD_REQUIRED' | translate}}
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+        {{'LOGIN.LOGIN' | translate}}
+      </button>
+    </form>
+  </mat-card>
+</div>
