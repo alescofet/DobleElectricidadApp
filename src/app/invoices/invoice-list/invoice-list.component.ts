@@ -2,6 +2,8 @@ import * as XLSX from 'xlsx';
 
 import { Component, OnInit } from '@angular/core';
 
+import { TranslateService } from '@ngx-translate/core';
+
 interface Invoice {
   name: string;
   date: string;
@@ -34,17 +36,17 @@ export class InvoiceListComponent implements OnInit {
     // facturas mockeadas para la prueba, deberiamos recogerlas de una API
   ];
 
-  constructor() {}
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {}
 
   downloadInvoice(invoice: Invoice): void { //Enviar toda la informacion de la factura seleccionada
     const invoiceData = [
       {
-        'Nombre de Factura': invoice.name,
-        'Fecha de Emisión': invoice.date,
-        'Importe': invoice.amount,
-        'Dirección de Suministro': invoice.address
+        [this.translateService.instant("INVOICES.NAME")]: invoice.name,
+        [this.translateService.instant("INVOICES.DATE")]: invoice.date,
+        [this.translateService.instant("INVOICES.IMPORT")]: invoice.amount,
+        [this.translateService.instant("INVOICES.ADDRESS")]: invoice.address
       }
     ];
 
